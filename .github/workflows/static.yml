@@ -31,13 +31,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Check if /dist exists
+        id: check-dist
+        run: |
+          if [ -d "./dist" ]; then echo "exists=true" >> $GITHUB_ENV; else echo "exists=false" >> $GITHUB_ENV; fi
+
       - name: Upload artifact
+        if: env.exists == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # Upload entire /dist folder
           path: './dist'
+
       - name: Deploy to GitHub Pages
+        if: env.exists == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
