@@ -60,7 +60,7 @@ const AssignmentDetail = ({ dark }) => {
               try {
                 const result = func(args);
                 const end = performance.now();
-                resolve({ result, time: end - start });
+                resolve({ result, time: Math.floor(end - start) });
               } catch (e) {
                 reject(e);
               }

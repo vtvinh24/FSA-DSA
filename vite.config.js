@@ -5,6 +5,14 @@ import tailwindcss from "tailwindcss";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  root: ".",
+  base: "./",
+  server: {
+    port: 5173,
+  },
+  build: {
+    outDir: "./dist",
+  },
   preview: {
     port: 5173,
   },
