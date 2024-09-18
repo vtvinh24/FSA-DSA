@@ -1,0 +1,12 @@
+{
+  "title": "Diagonal Difference",
+  "link": "https://www.hackerrank.com/challenges/diagonal-difference",
+  "solved": true,
+  "sample": {
+    "input": ["3", "11 2 4", "4 5 6", "10 8 -12"],
+    "output": [15]
+  },
+  "fallback": {
+    "asm-image": "/data/7/4/asm.png"
+  }
+}

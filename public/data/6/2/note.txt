@@ -1,0 +1,16 @@
+2. https://www.hackerrank.com/challenges/delete-duplicate-value-nodes-from-a-sorted-linked-list/problem?isFullScreen=true
+
+sample input:
+STDIN   Function
+-----   --------
+1       t = 1
+5       n = 5
+1       data values = 1, 2, 2, 3, 4
+2
+2
+3
+4
+
+sample output:
+1 2 3 4
+

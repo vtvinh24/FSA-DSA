@@ -1,0 +1,1 @@
+approach: shift left by 1 for each rotation, and append first element to end of array

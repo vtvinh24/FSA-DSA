@@ -1,0 +1,37 @@
+"1. https://www.hackerrank.com/challenges/merge-two-sorted-linked-lists/problem?isFullScreen=true
+
+input format:
+t: number of test cases
+-- each tc:
+n: length of first linked list
+n lines: n integers of first LL
+m: length of second LL
+m lines: m ints of second LL
+
+sample input: (indentation is to make it easier to distinguish, actual input does not contain indents)
+1
+3
+  1 
+  2 
+  3 
+2
+  3
+  4
+
+sample output:
+1 2 3 3 4 
+
+approach:
+1. outer loop: test case
+  for each tc:
+    2. parse first LL: length, then elements
+    3. parse second LL
+    -- merge logic:
+    4. inner loop:
+      4.1. create new LL, start with smallest node of two LL
+      4.2. loop both LL, append the smallest node to new LL
+      4.3. for each append, point to next node of the selected LL
+      4.4. go to 4.2
+
+
+      

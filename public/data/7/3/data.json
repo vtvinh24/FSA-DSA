@@ -1,0 +1,12 @@
+{
+  "title": "Birthday Cake Candles",
+  "link": "https://www.hackerrank.com/challenges/birthday-cake-candles",
+  "solved": true,
+  "sample": {
+    "input": ["4", "3 2 1 3"],
+    "output": [2]
+  },
+  "fallback": {
+    "asm-image": "/data/7/3/asm.png"
+  }
+}

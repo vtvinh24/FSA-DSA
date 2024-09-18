@@ -1,0 +1,41 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Shared dark mode styles */
+.dark {
+  --bg-color: #1f2937; /* bg-gray-700 */
+  --text-color: #ffffff; /* text-white */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+@layer components {
+  .border-theme {
+    @apply border-2 border-black dark:border-white;
+  }
+
+  .bg-hover {
+    @apply hover:bg-blue-200 dark:hover:bg-gray-500;
+  }
+
+  .text-theme {
+    @apply text-black dark:text-white;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-0.5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-black dark:bg-white;
+  }
+
+  ::-webkit-resizer {
+    @apply bg-green-500 rounded-full;
+  }
+}

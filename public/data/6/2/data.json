@@ -1,0 +1,12 @@
+{
+  "title": "Delete duplicate value nodes from a sorted linked list",
+  "link": "https://www.hackerrank.com/challenges/delete-duplicate-value-nodes-from-a-sorted-linked-list/problem",
+  "solved": true,
+  "sample": {
+    "input": [1, 5, 1, 2, 2, 3, 4],
+    "output": ["1 2 3 4"]
+  },
+  "fallback": {
+    "asm-image": "/data/6/2/asm.png"
+  }
+}

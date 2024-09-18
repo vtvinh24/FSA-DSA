@@ -1,0 +1,12 @@
+{
+  "title": "Pascal's Triangle",
+  "link": "https://www.hackerrank.com/challenges/pascals-triangle/problem",
+  "solved": true,
+  "sample": {
+    "input": ["1 2 3 4 5", "6 7 8 9 10", "1 4"],
+    "output": ["2435300.3", "261729511.3"]
+  },
+  "fallback": {
+	"asm-image": "/data/1/1/asm.png"
+  }
+}

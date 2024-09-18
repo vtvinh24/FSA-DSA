@@ -1,0 +1,25 @@
+1. https://www.hackerrank.com/challenges/java-if-else/problem?isFullScreen=true
+
+n % 2 == 1 -> Weird
+n % 2 == 0 && 2 <= n <= 5 NW
+			  6    n    20 W
+			  > 20 NW
+
+
+2. https://www.hackerrank.com/challenges/java-loops/problem?isFullScreen=true
+
+calc binomial sum of:
+a + b
+a + b + 2b
+a + b + 2b + 4b
+a + b^n-1
+
+
+3. https://www.hackerrank.com/challenges/java-loops-i/problem?isFullScreen=true
+// basic problem
+
+4. https://www.hackerrank.com/challenges/java-substring/problem?isFullScreen=true
+// basic problem
+
+5. https://www.hackerrank.com/challenges/java-string-reverse/problem?isFullScreen=true
+// basic problem

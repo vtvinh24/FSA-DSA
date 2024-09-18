@@ -1,0 +1,66 @@
+1. https://www.hackerrank.com/challenges/strange-grid/problem?isFullScreen=true
+
+converted:
+0	0 2 4 6 8
+	1 3 5 7 9
+1	0 2 4 6 8
+	1 3 5 7 9
+..	...
+
+
+1-indexed:
+- row 1, col 1 = 0
+	= row 1, 2 -> start with 0
+	  col 1 -> +1
+	  = 2 * col - 2
+- row 1, col 2 = 2
+	= start with 0
+	  col 2 -> +2
+- row 1, col 3 = 4
+	= start with -
+	= ends with 2x3-2 = 4
+	
+	-> formula:
+	with: n row, m col
+	then: [n/2][2*(col-1)]
+	
+2. https://www.hackerrank.com/challenges/handshake/problem?isFullScreen=true
+
+n * (n - 1) / 2 (sum of n consecutive natural numbers)
+
+3. https://www.hackerrank.com/challenges/special-multiple/problem?isFullScreen=true
+
+N: random int
+X: an int contains only 9s and 0s, which is a multiple of N
+
+approach: brute force
+however input and output can both be out of data type range, so String should be considered
+
+
+4. https://www.hackerrank.com/challenges/summing-the-n-series/problem?isFullScreen=true
+
+approach: use Java BigInteger
+current: 50% failed
+
+
+
+5. https://www.hackerrank.com/challenges/bus-station/problem?isFullScreen=true
+
+fill the bus:
+example: 1 2 3 4 5
+bus size: 3 -> can fill g1 + g2, and g3, but then can't fill g4, g5
+bus size: 6: can fill g1 + 2 + 3, but leave empty seats when filling g4 or g5
+
+approach:
+min size of bus = size of largest group
+max size of bus = size of all groups
+and sum must be divisible by size (if there is remainder -> a bus contains empty seats)
+
+for size from min to max:
+ cache = 0;
+ for i = 1 to last group:
+	cache += gi.size
+	if cache = size, cache = 0
+	if cache > size, skip to next size
+	( since there are empty seats which can not fill the whole next group)
+ if this i loop completed, then the current size is valid, return it

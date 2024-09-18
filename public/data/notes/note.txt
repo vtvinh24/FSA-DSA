@@ -1,0 +1,88 @@
+Q1:
+ab -> ab
+aba -> ab
+abcb -> abc
+...
+
+
+
+area under curves:
+
+a: 1 2 3 4 5
+b: 6 7 8 9 10
+x: 1 4
+
+cal 
+  /4  
+ /1  (a)x^b
+ 
+approach 1:
+calc each area by: si = ai * 4 ^ bi - ai * 1 ^ bi
+sum area by s = s1 + s2 + ...
+
+volume of solid by revolving curve around x-axis:
+v = (s/2) ^2 * pi ??
+yt: V = pi /b y^2 dx
+		  /a
+
+Q2: remove any duplicate letter in a string
+e.g: abcdefacf -> abcdef; aabcdd -> abcd
+approach 1:
+loop every letter, if occured again after initial, replace with blank
+approach 2:
+loop every letter, if it is the first occurence, copy to a new string, after the loop, new string should contain unique letters only, in correct order
+
+Q3: super digit: sum of all digits (of all digits... recursively)
+e.g: 1234 -> s = sum(1 + 2 + 3 + 4)
+				 10
+			 s = sum(1 + 0)
+			 s = 1
+appr.1: 
+super(int x) {
+	int sum = 0;
+	while x > 10:
+		sum += x % 10;
+		if(x > 10) x /= 10;
+	
+	if(sum > 9) return super(sum)
+}
+			 
+Q4: pascal's triangle
+print n rows of:
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1
+...
+
+2 < n < 10
+formula: 
+with: n1 n2 n3 ... nx nx+1 ... n2x-1
+-> n! / (r! * (n-r)!) where n: row; r: column; start from 0
+
+Q5: sequence of colors
+is full if:
++ R = G
++ Y = B
++ prefix: R - G <= 1
++ prefix: Y - B <= 1
+
+provided cases:
+RGGR 1
+RYBG 1
+RYRB 0 (R != G)
+YGYGRBRB 0 (prefix: YGY -> Y - B = 2)
+
+assume:
+GGRR 0 (prefix)
+GRGR 1
+RRGG 0 (prefix, same as first assume)
+
+appr.1:
+1. count each color, validate first 2 conditions
+if fail -> 0
+2. validate prefix:
+for i = 1 to length of string
+if violates 3rd or 4th rule -> 0
+else 1

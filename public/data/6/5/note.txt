@@ -1,0 +1,33 @@
+5. https://www.hackerrank.com/challenges/simple-text-editor/problem?isFullScreen=true"
+
+
+sample input:
+STDIN   Function
+-----   --------
+8       Q = 8              
+1 abc   ops[0] = '1 abc'   abc
+3 3     ops[1] = '3 3'     abc -> c
+2 3     ...                abc, ab
+1 xy                       abc, ab, abxy
+3 2                        abc, ab, abxy -> b
+4                          abc, ab
+4                          abc
+3 1                        abc -> a
+
+sample output:
+c
+y
+a
+
+opcode:
+1 append
+2 delete last N chars
+3 print the Nth char
+4 undo
+
+approach:
+store string as a tmp var, and updates as a history array
+on 1: append string
+   2: remove substring
+   3: print 
+   4: set tmp var to history(-1)

@@ -1,0 +1,12 @@
+{
+  "title": "Java Lambda expressions",
+  "link": "https://www.hackerrank.com/challenges/java-lambda-expressions/problem",
+  "solved": true,
+  "sample": {
+    "input": ["5", "1 4", "2 5", "3 898", "1 3", "2 12"],
+    "output": ["EVEN", "PRIME", "PALINDROME", "ODD", "COMPOSITE"]
+  },
+  "fallback": {
+    "asm-image": "/data/1/1/asm.png"
+  }
+}

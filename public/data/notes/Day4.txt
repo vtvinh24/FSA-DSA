@@ -1,0 +1,19 @@
+1. https://www.hackerrank.com/challenges/camelcase/problem?isFullScreen=true
+
+basic problem
+
+2. https://www.hackerrank.com/challenges/simple-array-sum/problem?isFullScreen=true
+
+basic problem
+
+3. https://www.hackerrank.com/challenges/java-anagrams/problem?isFullScreen=true
+
+use an array to store occurences of each character
+
+4. https://www.hackerrank.com/challenges/staircase/problem?isFullScreen=true
+
+a space + b #, a--, b++, limit = n
+
+5. https://www.hackerrank.com/challenges/java-primality-test/problem?isFullScreen=true
+
+BigInteger.isProbablePrime()
