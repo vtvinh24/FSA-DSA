@@ -1,12 +1,12 @@
 {
-  "title": "Area Under Curves and Volume of Revolving a Curve",
-  "link": "https://www.hackerrank.com/challenges/area-under-curves-and-volume-of-revolving-a-curv/problem",
+  "title": "Common Child",
+  "link": "https://www.hackerrank.com/challenges/common-child",
   "solved": true,
   "sample": {
-    "input": ["1 2 3 4 5", "6 7 8 9 10", "1 4"],
-    "output": ["2435300.3", "261729511.3"]
+    "input": [],
+    "output": []
   },
   "fallback": {
-	"asm-image": "/data/1/1/asm.png"
+	"asm-image": "/data/8/5/asm.png"
   }
 }
