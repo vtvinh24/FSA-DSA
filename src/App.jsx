@@ -5,10 +5,14 @@ import Spinner from "./components/Spinner";
 import "./index.css";
 import Nav from "./layouts/Nav";
 
-const Assignments = lazy(() => import("./routes/Assignments"));
-const AssignmentDetail = lazy(() => import("./routes/AssignmentDetail"));
-const Overview = lazy(() => import("./routes/Overview"));
-const NotFound = lazy(() => import("./routes/NotFound"));
+// const Assignments = lazy(() => import("./routes/Assignments"));
+import Assignments from "./routes/Assignments";
+// const AssignmentDetail = lazy(() => import("./routes/AssignmentDetail"));
+import AssignmentDetail from "./routes/AssignmentDetail";
+// const Overview = lazy(() => import("./routes/Overview"));
+import Overview from "./routes/Overview";
+// const NotFound = lazy(() => import("./routes/NotFound"));
+import NotFound from "./routes/NotFound";
 
 function App() {
   const [dark, setDark] = useState(() => {
@@ -46,7 +50,7 @@ function App() {
           <Routes>
             <Route
               exact
-              path="/day/:day" 
+              path="/day/:day"
               element={<Assignments />}
             />
             <Route

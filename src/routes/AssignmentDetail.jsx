@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
-import { lazy, useState, useEffect } from "react";
-import { FaArrowUpFromBracket, FaClipboard, FaDoorOpen, FaLink, FaLinkSlash, FaPlay } from "react-icons/fa6";
+import { lazy, useEffect, useState } from "react";
+import { FaArrowCircleRight } from "react-icons/fa";
+import { FaClipboard, FaPlay } from "react-icons/fa6";
 import { useNavigate, useParams } from "react-router-dom";
+import NavigateButton from "../components/NavigateButton";
+// const CodeViewer = lazy(() => import("../components/editor/CodeViewer"));
+import CodeViewer from "../components/editor/CodeViewer";
 import TextArea from "../components/editor/TextArea";
 import useTextFile from "../hooks/useTextFile";
-import { FaArrowAltCircleLeft, FaArrowCircleRight, FaExternalLinkSquareAlt } from "react-icons/fa";
-import NavigateButton from "../components/NavigateButton";
-const CodeViewer = lazy(() => import("../components/editor/CodeViewer"));
 
 const AssignmentDetail = ({ dark }) => {
   const { day, id } = useParams();
