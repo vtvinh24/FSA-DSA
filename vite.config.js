@@ -6,7 +6,7 @@ import tailwindcss from "tailwindcss";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   // root: ".",
-  base: "/DSA-FSA/",
+  base: "./DSA-FSA/",
   server: {
     port: 5173,
   },
