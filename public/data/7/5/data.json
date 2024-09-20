@@ -1,12 +1,12 @@
 {
-  "title": "Sparse Arrays",
-  "link": "https://www.hackerrank.com/challenges/sparse-arrays",
+  "title": "Sparse arrays",
+  "link": "https://www.hackerrank.com/challenges/sparse-arrays/problem",
   "solved": true,
   "sample": {
-    "input": ["1 2 3 4 5", "6 7 8 9 10", "1 4"],
-    "output": ["2435300.3", "261729511.3"]
+    "input": [13, "abcde", "sdaklfj", "asdjf", "na", "basdn", "sdaklfj", "asdjf", "na", "asdjf", "na", "basdn", "sdaklfj", "asdjf", 5, "abcde", "sdaklfj", "asdjf", "na", "basdn"],
+    "output": [1, 3, 4, 3, 2]
   },
   "fallback": {
-	"asm-image": "/data/1/1/asm.png"
+    "asm-image": "/data/6/3/asm.png"
   }
 }
