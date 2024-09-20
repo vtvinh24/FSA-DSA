@@ -52,32 +52,8 @@ const AssignmentDetail = ({ dark }) => {
       if (lang === "javascript") {
         const mainFunc = new Function("args", text);
         const args = input.split("\n");
-
-        const executeWithTimeout = (func, args, timeout) => {
-          return Promise.race([
-            new Promise((resolve, reject) => {
-              const start = performance.now();
-              try {
-                const result = func(args);
-                const end = performance.now();
-                resolve({ result, time: Math.floor(end - start) });
-              } catch (e) {
-                reject(e);
-              }
-            }),
-            new Promise((_, reject) => setTimeout(() => reject(new Error("Execution timed out")), timeout)),
-          ]);
-        };
-
-        executeWithTimeout(mainFunc, args, 5000)
-          .then(({ result, time }) => {
-            setTime(time);
-            setOutput(result !== undefined ? result.toString() : "No output");
-          })
-          .catch((e) => {
-            setTime(5000);
-            setOutput(`Error: ${e.message}`);
-          });
+        const result = mainFunc(args);
+        setOutput(result !== undefined ? result.toString() : "No output");
       } else {
         setOutput("Language not supported yet");
       }
@@ -192,7 +168,7 @@ const AssignmentDetail = ({ dark }) => {
             <span className="text-theme">Run code</span>
             <FaPlay />
           </span>
-          <span className="inline-flex items-center ms-2">Execution time: {time}ms</span>
+          {/* <span className="inline-flex items-center ms-2">Execution time: {time}ms</span> */}
         </div>
       </div>
 
