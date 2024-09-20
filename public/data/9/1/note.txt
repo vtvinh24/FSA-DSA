@@ -1,26 +1,22 @@
-Q1:
-ab -> ab
-aba -> ab
-abcb -> abc
-...
+sample input:
+5
+5 41 77 74 22 44
+1 12
+4 37 34 36 52
+0
+3 20 22 33
+5
+1 3
+3 4
+3 1
+4 3
+5 5
 
+sample output:
+74
+52
+37
+ERROR!
+ERROR!
 
-
-area under curves:
-
-a: 1 2 3 4 5
-b: 6 7 8 9 10
-x: 1 4
-
-cal 
-  /4  
- /1  (a)x^b
- 
-approach 1:
-calc each area by: si = ai * 4 ^ bi - ai * 1 ^ bi
-sum area by s = s1 + s2 + ...
-
-volume of solid by revolving curve around x-axis:
-v = (s/2) ^2 * pi ??
-yt: V = pi /b y^2 dx
-		  /a
+basic problem, js Array can be used similar to Java ArrayList
