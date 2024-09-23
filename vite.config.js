@@ -6,13 +6,14 @@ import tailwindcss from "tailwindcss";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   // root: ".",
-  base: "./DSA-FSA/",
+  // base: "./DSA-FSA/",
   server: {
     port: 5173,
   },
   build: {
     outDir: "./dist",
-    chunkSizeWarningLimit: 1024,
+    // warn on single chunk size > 4 MB
+    chunkSizeWarningLimit: 4096,
   },
   preview: {
     port: 5173,
