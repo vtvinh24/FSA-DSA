@@ -7,6 +7,5 @@
     "output": ["c", "y", "a"]
   },
   "fallback": {
-    "asm-image": "/data/6/5/asm.png"
+    "image": "/data/6/5/asm.png"
   }
-}

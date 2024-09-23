@@ -7,6 +7,5 @@
     "output": ["pangram"]
   },
   "fallback": {
-    "asm-image": "/data/8/3/asm.png"
+    "image": "/data/8/3/asm.png"
   }
-}

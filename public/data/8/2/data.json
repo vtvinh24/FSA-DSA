@@ -7,6 +7,5 @@
     "output": ["okffng-Qwvb"]
   },
   "fallback": {
-    "asm-image": "/data/8/2/asm.png"
+    "image": "/data/8/2/asm.png"
   }
-}

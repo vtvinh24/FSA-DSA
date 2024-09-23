@@ -7,6 +7,5 @@
     "output": ["EVEN", "PRIME", "PALINDROME", "ODD", "COMPOSITE"]
   },
   "fallback": {
-    "asm-image": "/data/1/1/asm.png"
+    "image": "/data/1/1/asm.png"
   }
-}
