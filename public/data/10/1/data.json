@@ -3,8 +3,8 @@
   "link": "https://www.hackerrank.com/challenges/two-strings",
   "solved": true,
   "sample": {
-    "input": [],
-    "output": []
+    "input": [2, "hello", "world", "hi", "world"],
+    "output": ["YES", "NO"]
   },
   "image": "/data/10/1/asm.png"
 }

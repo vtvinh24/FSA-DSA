@@ -1,5 +1,4 @@
-1. https://www.hackerrank.com/challenges/two-strings/problem?isFullScreen=true
-2. https://www.hackerrank.com/challenges/string-construction/problem?isFullScreen=true
-3. https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem
-4. https://leetcode.com/problems/word-break/
-5. https://leetcode.com/problems/longest-word-in-dictionary/
+Approach 1:
+- Get shorter string s
+- For each char in s, check if s2 contains that char
+- If not, return false (NO), else (YES)
