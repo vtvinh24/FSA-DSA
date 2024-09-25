@@ -25,8 +25,8 @@ const AssignmentCard = ({ id, day }) => {
       onClick={handleClick}
       className="w-4/5 h-24 cursor-pointer hover:bg-gray-200"
     >
-      <div className="inline-block w-1/5 bg-green-600 h-full text-center content-center text-5xl">{id}</div>
-      <div className="inline-block w-4/5 bg-green-100 h-full text-center content-center text-xl">{data ? data.title : "Loading..."}</div>
+      <div className="inline-block w-1/5 bg-green-600 dark:bg-gray-900 border border-black dark:border-white h-full text-center content-center text-5xl">{id}</div>
+      <div className="inline-block w-4/5 bg-green-100 dark:bg-gray-500 border border-black dark:border-white h-full text-center content-center text-xl">{data ? data.title : "Loading..."}</div>
     </div>
   );
 };

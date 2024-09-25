@@ -1,6 +1,1 @@
-Q2: remove any duplicate letter in a string
-e.g: abcdefacf -> abcdef; aabcdd -> abcd
-approach 1:
-loop every letter, if occured again after initial, replace with blank
-approach 2:
-loop every letter, if it is the first occurence, copy to a new string, after the loop, new string should contain unique letters only, in correct order
+Duplicate of 6.2

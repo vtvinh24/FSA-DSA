@@ -1,6 +1,11 @@
-Q2: remove any duplicate letter in a string
-e.g: abcdefacf -> abcdef; aabcdd -> abcd
-approach 1:
-loop every letter, if occured again after initial, replace with blank
-approach 2:
-loop every letter, if it is the first occurence, copy to a new string, after the loop, new string should contain unique letters only, in correct order
+10      q = 10 (number of queries)
+1 42    1st query, enqueue 42
+2       dequeue front element
+1 14    enqueue 42
+3       print the front element
+1 28    enqueue 28
+3       print the front element
+1 60    enqueue 60
+1 78    enqueue 78
+2       dequeue front element
+2       dequeue front element

@@ -5,7 +5,7 @@
 
 /* Shared dark mode styles */
 .dark {
-  --bg-color: #1f2937; /* bg-gray-700 */
+  --bg-color: #000000; /* bg-gray-700 */
   --text-color: #ffffff; /* text-white */
 }
 

@@ -1,26 +1,16 @@
-Q1:
-ab -> ab
-aba -> ab
-abcb -> abc
-...
+sample input - explain
+10      q = 10 (number of queries)
+1 42    1st query, enqueue 42
+2       dequeue front element
+1 14    enqueue 42
+3       print the front element
+1 28    enqueue 28
+3       print the front element
+1 60    enqueue 60
+1 78    enqueue 78
+2       dequeue front element
+2       dequeue front element
 
-
-
-area under curves:
-
-a: 1 2 3 4 5
-b: 6 7 8 9 10
-x: 1 4
-
-cal 
-  /4  
- /1  (a)x^b
- 
-approach 1:
-calc each area by: si = ai * 4 ^ bi - ai * 1 ^ bi
-sum area by s = s1 + s2 + ...
-
-volume of solid by revolving curve around x-axis:
-v = (s/2) ^2 * pi ??
-yt: V = pi /b y^2 dx
-		  /a
+sample output:
+14
+14

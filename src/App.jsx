@@ -37,7 +37,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className={`${dark ? "bg-gray-700" : ""}`}>
+      <div className="">
         <BackButton
           onClick={handleBackClick}
           hidden={true}

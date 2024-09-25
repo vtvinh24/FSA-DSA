@@ -11,13 +11,13 @@ const ThemeButton = ({ dark, setDark }) => {
       onClick={handleClick}
       className="relative inline-flex items-center p-1 rounded-full w-12 h-6 cursor-pointer bg-gray-200 dark:bg-gray-700"
     >
-      <span className={`absolute left-1 transition-transform duration-300 transform ${dark ? "translate-x-6" : "translate-x-0 hidden"}`}>
+      <span className="absolute left-1 transition-transform duration-300 transform dark:translate-x-6 translate-x-0 hidden dark:visible">
         <FaMoon className="text-black" />
       </span>
-      <span className={`absolute right-1 transition-transform duration-300 transform ${dark ? "translate-x-0 hidden" : "-translate-x-6"}`}>
+      <span className="absolute right-1 transition-transform duration-300 transform dark:translate-x-0 dark:hidden -translate-x-6 visible">
         <FaSun className="text-white" />
       </span>
-      <span className={`block w-full h-full bg-gray-300 rounded-full transition-transform duration-300 ${dark ? "bg-blue-500" : "bg-gray-300"}`} />
+      <span className="block w-full h-full bg-gray-300 rounded-full transition-transform duration-300 dark:bg-gray-500 border" />
     </button>
   );
 };

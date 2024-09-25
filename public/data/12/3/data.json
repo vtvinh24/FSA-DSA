@@ -1,10 +1,10 @@
 {
-  "title": "Area Under Curves and Volume of Revolving a Curve",
-  "link": "https://www.hackerrank.com/challenges/area-under-curves-and-volume-of-revolving-a-curv/problem",
+  "title": "Elimination Game",
+  "link": "https://leetcode.com/problems/elimination-game/",
   "solved": true,
   "sample": {
-    "input": ["1 2 3 4 5", "6 7 8 9 10", "1 4"],
-    "output": ["2435300.3", "261729511.3"]
+    "input": [9],
+    "output": [6]
   },
-  "image": "/data/1/1/asm.png"
-  }
+  "image": "/data/12/3/asm.png"
+}

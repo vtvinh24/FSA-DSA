@@ -1,14 +1,66 @@
-Q3: super digit: sum of all digits (of all digits... recursively)
-e.g: 1234 -> s = sum(1 + 2 + 3 + 4)
-				 10
-			 s = sum(1 + 0)
-			 s = 1
-appr.1: 
-super(int x) {
-	int sum = 0;
-	while x > 10:
-		sum += x % 10;
-		if(x > 10) x /= 10;
-	
-	if(sum > 9) return super(sum)
-}
+You have a list arr of all integers in the range [1, n] sorted in a strictly increasing order. Apply the following algorithm on arr:
+
+Starting from left to right, remove the first number and every other number afterward until you reach the end of the list.
+Repeat the previous step again, but this time from right to left, remove the rightmost number and every other number from the remaining numbers.
+Keep repeating the steps again, alternating left to right and right to left, until a single number remains.
+Given the integer n, return the last number that remains in arr.
+
+Example 1:
+
+Input: n = 9
+Output: 6
+Explanation:
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+arr = [2, 4, 6, 8]
+arr = [2, 6]
+arr = [6]
+Example 2:
+
+Input: n = 1
+Output: 1
+ 
+1 <= n <= 10^9
+
+
+original:       123456  123456789  abcdefghijklmnopqrstuvwxyz
+rm even index    2 4 6   2 4 6 8    b d f h j l n p r t v x z
+rm odd index     2   6   2   6      b   f   j   n   r   v   z
+rm even index        6       6          f       n       v
+                                        f               v
+                                                        v
+            0                 1                   2                   3                   4                   5                   6                   .                   .                   .                   .                   11
+            1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 
+            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
+              .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   
+              .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .  
+                      .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .               .  
+                                      .                               .                               .                               .                               .                               .                               .                               .                               .                               .                               .                               .                               .                  
+                                      .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .                                                               .
+                                                                                                                                                                                                                                      .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               . 
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                                                                                                                                                 .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .                                                                                                                               .
+              2       6               14                                                                                                                                                                                             . 
+                                                                                                      
+              2 + 4x1
+                      6 + 4x2
+                                      14 + 4x2^n
+                                                                                                     46 + 4x16
+
+                                                                                                     110 = 46 + 64
+
+2
+    0 + 4*2^-1= 2
+    2 + 4*2^  0 = 6
+              
+    6 + 4*2^  1 = 14
+              2^1 - 1
+   14 + 4*2^  3 = 46
+              2^2 - 1
+   46 + 4*2^  6 = 302
+              2^3 - 2
+
+however, these seems off, using binary division instead

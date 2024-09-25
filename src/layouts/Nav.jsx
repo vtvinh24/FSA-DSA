@@ -13,15 +13,16 @@ const Nav = ({ dark, setDark }) => {
   });
 
   return (
-    <div className={`flex justify-between items-center p-4 ${dark ? "bg-black text-white" : "bg-blue-500 text-black"}`}>
+    <div className="flex justify-between items-center p-4 dark:bg-gray-800 dark:text-white bg-blue-500 text-black">
       <div className="text-lg">
         {formattedPath.map((segment, index) => (
           <span key={index}>
             <Link
               to={segment.path}
-              className={`transition-colors duration-300 ${dark ? "text-white hover:text-gray-400" : "text-black hover:text-gray-700"}`}
+              className="transition-colors duration-300 dark:text-white dark:hover:text-gray-400 text-black hover:text-gray-700"
             >
-              {index == 1 && "Day "} {index == 2 && "Assignment #"}{segment.name}
+              {index == 1 && "Day "} {index == 2 && "Assignment #"}
+              {segment.name}
             </Link>
             {index < formattedPath.length - 1 && "  /  "}
           </span>

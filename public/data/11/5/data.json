@@ -1,6 +1,6 @@
 {
   "title": "Area Under Curves and Volume of Revolving a Curve",
-  "link": "https://www.hackerrank.com/challenges/area-under-curves-and-volume-of-revolving-a-curv/problem",
+  "link": "https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list",
   "solved": true,
   "sample": {
     "input": ["1 2 3 4 5", "6 7 8 9 10", "1 4"],

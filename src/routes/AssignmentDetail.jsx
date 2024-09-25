@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { lazy, useEffect, useState } from "react";
-import { FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import { FaClipboard, FaPlay } from "react-icons/fa6";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import NavigateButton from "../components/NavigateButton";
 // const CodeViewer = lazy(() => import("../components/editor/CodeViewer"));
 import CodeViewer from "../components/editor/CodeViewer";
@@ -90,11 +90,19 @@ const AssignmentDetail = ({ dark }) => {
         id="asm-info"
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="mb-8 text-4xl font-bold mt-20 text-theme">{meta.title}</h1>
+        <h1 className="mb-8 text-4xl font-bold mt-20 text-theme">
+          Assignment {day}.{id}: {meta.title}
+        </h1>
 
-        <p className="text-theme">
+        {/* <p className="text-theme">
           Assignment #{id} of Day {day}
-        </p>
+        </p> */}
+        <Link to={`/day/${day}`}>
+          <span className="inline-flex items-center gap-2 hover:text-blue-500">
+            <FaArrowCircleLeft />
+            Back to Day {day}
+          </span>
+        </Link>
         <a
           className="cursor-pointer"
           href={meta.link}
@@ -114,10 +122,11 @@ const AssignmentDetail = ({ dark }) => {
 
       <div id="solution">
         {/* <h2 className="text-theme">Solution</h2> */}
+        <div className="inline-flex me-2">Language</div>
         <select
           onChange={handleChangeLang}
           value={lang}
-          className={`border-theme rounded dark:bg-gray-800 dark:text-white ${dark ? "text-black" : ""}`}
+          className="border dark:border-white border-black p-2 rounded dark:text-white dark:bg-gray-800"
         >
           <option value="javascript">Javascript</option>
           <option value="java">Java</option>
@@ -125,7 +134,7 @@ const AssignmentDetail = ({ dark }) => {
           <option value="c">C</option>
           <option value="text">Plain Text</option>
         </select>
-
+          
         {loading ? (
           <p>Loading code...</p>
         ) : error ? (
