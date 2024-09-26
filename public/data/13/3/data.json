@@ -1,10 +1,10 @@
 {
-  "title": "Area Under Curves and Volume of Revolving a Curve",
-  "link": "https://www.hackerrank.com/challenges/area-under-curves-and-volume-of-revolving-a-curv/problem",
+  "title": "Binary Search Tree Lowest Common Ancestor",
+  "link": "https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor",
   "solved": true,
   "sample": {
-    "input": ["1 2 3 4 5", "6 7 8 9 10", "1 4"],
-    "output": ["2435300.3", "261729511.3"]
+    "input": [7, 3, 2, 5, 1, 4, 6, 7, 4, 7],
+    "output": [3]
   },
-  "image": "/data/1/1/asm.png"
+  "image": "/data/13/3/asm.png"
   }

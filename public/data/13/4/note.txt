@@ -1,13 +1,6 @@
-Q4: pascal's triangle
-print n rows of:
-1
-1 1
-1 2 1
-1 3 3 1
-1 4 6 4 1
-...
+    3
+  2    5
+ 1    4  6
+          7
 
-2 < n < 10
-formula: 
-with: n1 n2 n3 ... nx nx+1 ... n2x-1
--> n! / (r! * (n-r)!) where n: row; r: column; start from 0
+=> 3 paths
