@@ -34,15 +34,14 @@ const AssignmentDetail = ({ dark }) => {
   useEffect(() => {
     try {
       if (data) {
-        // Check if data exists
-        const parsedData = JSON.parse(data); // Try parsing the JSON data
-        setMeta(parsedData); // Set the parsed data into meta
+        const parsedData = JSON.parse(data); 
+        setMeta(parsedData); 
       }
-      // else {
-      //   // console.log("No data to parse.");
-      // }
+      else {
+        // console.log("No data to parse.");
+      }
     } catch (error) {
-      console.error("Error parsing JSON in useEffect:", error); // Log parsing errors
+      console.error("Error parsing JSON in useEffect:", error);
     }
   }, [data]);
 
@@ -198,13 +197,13 @@ const AssignmentDetail = ({ dark }) => {
         </div>
       </div>
 
-      <div
+      {/* <div
         id="nav-btn"
         className="flex justify-between mt-10"
       >
         <NavigateButton onClick={navigateToPrev}>Prev</NavigateButton>
         <NavigateButton onClick={navigateToNext}>Next</NavigateButton>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import { FaMoon, FaSun } from "react-icons/fa";
+import PropTypes from "prop-types";
 
 const ThemeButton = ({ dark, setDark }) => {
   const handleClick = () => {
@@ -7,18 +7,14 @@ const ThemeButton = ({ dark, setDark }) => {
   };
 
   return (
-    <button
+    <div
       onClick={handleClick}
-      className="relative inline-flex items-center p-1 rounded-full w-12 h-6 cursor-pointer bg-gray-200 dark:bg-gray-700"
+      className="w-16 h-8 flex items-center bg-gray-800 dark:bg-gray-200 rounded-full p-1 cursor-pointer transition-colors duration-300"
     >
-      <span className="absolute left-1 transition-transform duration-300 transform dark:translate-x-6 translate-x-0 hidden dark:visible">
-        <FaMoon className="text-black" />
-      </span>
-      <span className="absolute right-1 transition-transform duration-300 transform dark:translate-x-0 dark:hidden -translate-x-6 visible">
-        <FaSun className="text-white" />
-      </span>
-      <span className="block w-full h-full bg-gray-300 rounded-full transition-transform duration-300 dark:bg-gray-500 border" />
-    </button>
+      <div className={`w-6 h-6 bg-white dark:bg-gray-400 rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center ${dark ? "translate-x-8" : ""}`}>
+        {dark ? <FaMoon className="transition-colors duration-300" /> : <FaSun className="transition-colors duration-300" />}
+      </div>
+    </div>
   );
 };
 
