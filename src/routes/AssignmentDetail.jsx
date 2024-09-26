@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { lazy, useEffect, useState } from "react";
-import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import { FaClipboard, FaPlay } from "react-icons/fa6";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import NavigateButton from "../components/NavigateButton";
@@ -96,7 +96,7 @@ const AssignmentDetail = ({ dark }) => {
 
         {/* <p className="text-theme">
           Assignment #{id} of Day {day}
-        </p> */}
+          </p> */}
         <Link to={`/day/${day}`}>
           <span className="inline-flex items-center gap-2 hover:text-blue-500">
             <FaArrowCircleLeft />
@@ -112,6 +112,7 @@ const AssignmentDetail = ({ dark }) => {
           </span>
         </a>
       </div>
+      <div id="asm-problem"></div>
       <div
         id="nav-btn"
         className="flex justify-center gap-2 mt-10"
@@ -121,7 +122,7 @@ const AssignmentDetail = ({ dark }) => {
       </div>
 
       <div id="solution">
-        {/* <h2 className="text-theme">Solution</h2> */}
+        <h2 className="text-theme text-4xl">Solution</h2>
         <div className="inline-flex me-2">Language</div>
         <select
           onChange={handleChangeLang}
@@ -134,7 +135,7 @@ const AssignmentDetail = ({ dark }) => {
           <option value="c">C</option>
           <option value="text">Plain Text</option>
         </select>
-          
+
         {loading ? (
           <p>Loading code...</p>
         ) : error ? (
@@ -150,48 +151,51 @@ const AssignmentDetail = ({ dark }) => {
         )}
       </div>
 
-      <div
-        id="input"
-        className="mt-20 text-theme"
-      >
-        <h2>Input</h2>
-        <TextArea
-          readOnly={false}
-          input={input}
-          handleChange={(e) => setInput(e.target.value)}
-        />
+      <h2 className="mt-20 text-4xl">Verify</h2>
+      <div className="columns-2">
         <div
-          id="input-btn"
-          className="flex gap-2"
+          id="input"
+          className="text-theme"
         >
-          <span
-            onClick={fillSample}
-            className="inline-flex items-center gap-2 border-theme bg-hover rounded p-2 cursor-pointer"
+          <h2>Input</h2>
+          <TextArea
+            readOnly={false}
+            input={input}
+            handleChange={(e) => setInput(e.target.value)}
+          />
+          <div
+            id="input-btn"
+            className="flex gap-2"
           >
-            <span className="text-theme">Sample input</span>
-            <FaClipboard />
-          </span>
-          <span
-            onClick={runCode}
-            className="inline-flex items-center gap-2 border-theme bg-hover rounded p-2 cursor-pointer"
-          >
-            <span className="text-theme">Run code</span>
-            <FaPlay />
-          </span>
-          {/* <span className="inline-flex items-center ms-2">Execution time: {time}ms</span> */}
+            <span
+              onClick={fillSample}
+              className="inline-flex items-center gap-2 border-theme bg-hover rounded p-2 cursor-pointer"
+            >
+              <span className="text-theme">Sample input</span>
+              <FaClipboard />
+            </span>
+            <span
+              onClick={runCode}
+              className="inline-flex items-center gap-2 border-theme bg-hover rounded p-2 cursor-pointer"
+            >
+              <span className="text-theme">Run code</span>
+              <FaPlay />
+            </span>
+            {/* <span className="inline-flex items-center ms-2">Execution time: {time}ms</span> */}
+          </div>
         </div>
-      </div>
 
-      <div
-        id="output"
-        className="mt-20"
-      >
-        <h2 className="text-theme">Output</h2>
-        <TextArea
-          readOnly={true}
-          input={output}
-          handleChange={() => {}}
-        />
+        <div
+          id="output"
+          className="mt-20"
+        >
+          <h2 className="text-theme">Output</h2>
+          <TextArea
+            readOnly={true}
+            input={output}
+            handleChange={() => {}}
+          />
+        </div>
       </div>
 
       <div
