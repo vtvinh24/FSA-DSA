@@ -6,6 +6,5 @@
     "input": [13, "abcde", "sdaklfj", "asdjf", "na", "basdn", "sdaklfj", "asdjf", "na", "asdjf", "na", "basdn", "sdaklfj", "asdjf", 5, "abcde", "sdaklfj", "asdjf", "na", "basdn"],
     "output": [1, 3, 4, 3, 2]
   },
-  "fallback": {
-    "image": "/data/6/3/asm.png"
-  }
+  "image": "/data/6/3/asm.png"
+}

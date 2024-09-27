@@ -1,10 +1,10 @@
 {
-  "title": "Area Under Curves and Volume of Revolving a Curve",
-  "link": "https://www.hackerrank.com/challenges/area-under-curves-and-volume-of-revolving-a-curv/problem",
+  "title": "Pascal Triangle",
+  "link": "https://leetcode.com/problems/pascals-triangle/",
   "solved": true,
   "sample": {
-    "input": ["1 2 3 4 5", "6 7 8 9 10", "1 4"],
-    "output": ["2435300.3", "261729511.3"]
+    "input": [5],
+    "output": [1, "1 1", "1 2 1", "1 3 3 1", "1 4 6 4 1"]
   },
-  "image": "/data/1/1/asm.png"
-  }
+  "image": "/data/14/2/asm.png"
+}

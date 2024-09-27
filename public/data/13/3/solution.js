@@ -55,4 +55,4 @@ let n1 = parseInt(args[line++]);
 let n2 = parseInt(args[line++]);
 
 // Find smallest common ancestor
-return tree.findLCA(tree.root, n1, n2);
+return tree.findLCA(tree.root, n1, n2).data;

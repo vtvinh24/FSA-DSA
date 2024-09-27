@@ -6,6 +6,5 @@
     "input": ["We promptly judged antique ivory buckles for the next prize"],
     "output": ["pangram"]
   },
-  "fallback": {
-    "image": "/data/8/3/asm.png"
-  }
+  "image": "/data/8/3/asm.png"
+}

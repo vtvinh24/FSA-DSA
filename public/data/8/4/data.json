@@ -6,6 +6,5 @@
     "input": ["aabbcd"],
     "output": ["NO"]
   },
-  "fallback": {
-    "image": "/data/8/4/asm.png"
-  }
+  "image": "/data/8/4/asm.png"
+}

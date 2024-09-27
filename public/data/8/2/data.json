@@ -6,6 +6,5 @@
     "input": [11, "middle-Outz", 2],
     "output": ["okffng-Qwvb"]
   },
-  "fallback": {
-    "image": "/data/8/2/asm.png"
-  }
+  "image": "/data/8/2/asm.png"
+}

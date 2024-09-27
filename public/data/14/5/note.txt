@@ -1,25 +1,7 @@
-Q5: sequence of colors
-is full if:
-+ R = G
-+ Y = B
-+ prefix: R - G <= 1
-+ prefix: Y - B <= 1
+sample input: [7,1,5,3,6,4]
 
-provided cases:
-RGGR 1
-RYBG 1
-RYRB 0 (R != G)
-YGYGRBRB 0 (prefix: YGY -> Y - B = 2)
 
-assume:
-GGRR 0 (prefix)
-GRGR 1
-RRGG 0 (prefix, same as first assume)
-
-appr.1:
-1. count each color, validate first 2 conditions
-if fail -> 0
-2. validate prefix:
-for i = 1 to length of string
-if violates 3rd or 4th rule -> 0
-else 1
+find right-most max, then find corresponding min to the left
+if found, return that value to an array
+repeat until the list is done
+return max of the array

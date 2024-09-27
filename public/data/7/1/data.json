@@ -3,11 +3,8 @@
   "link": "https://www.hackerrank.com/challenges/array-left-rotation",
   "solved": true,
   "sample": {
-    "input": [
-      "5 4",
-      "1 2 3 4 5"
-    ],
+    "input": ["5 4", "1 2 3 4 5"],
     "output": ["5 1 2 3 4"]
   },
   "image": "/data/7/1/asm.png"
-  }
+}
